@@ -26,7 +26,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="lr23_Spring_Hibernate" target="1.5" />
+      <module name="lr23_Spring_Hibernate" target="1.6" />
     </bytecodeTargetLevel>
   </component>
 </project>
