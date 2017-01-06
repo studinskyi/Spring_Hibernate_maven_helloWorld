@@ -1,11 +1,6 @@
 package model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 /**
  * Entity bean with JPA annotations
@@ -25,6 +20,20 @@ public class Person {
     private String name;
 
     private String country;
+
+    @OneToOne(optional = false, mappedBy = "person")
+    //@OneToOne(optional = false, cascade = CascadeType.ALL)
+    @JoinColumn(name = "id")
+    //@PrimaryKeyJoinColumn
+    private Employee employee;
+
+    public Employee getEmployee() {
+        return employee;
+    }
+
+    public void setEmployee(Employee empl) {
+        this.employee = empl;
+    }
 
     public int getId() {
         return id;

@@ -1,3 +1,4 @@
+create database db1;
 use db1;
 CREATE TABLE Person (
   id int(11) unsigned NOT NULL AUTO_INCREMENT,

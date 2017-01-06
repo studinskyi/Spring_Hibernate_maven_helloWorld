@@ -22,6 +22,7 @@
         <property name="annotatedClasses">
             <list>
                 <value>model.Person</value>
+                <value>model.Employee</value>
             </list>
         </property>
         <property name="hibernateProperties">
@@ -35,6 +36,9 @@
 
 
     <bean id="personDAO" class="dao.PersonDAOImpl">
+        <property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+    </bean>
+    <bean id="employeeDAO" class="dao.EmployeeDaoimpl">
         <property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
     </bean>
 </beans>
